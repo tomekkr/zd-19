@@ -1,8 +1,8 @@
 class Student extends Person {
     private boolean payment;
 
-    public Student(String firstName, String lastName, String pesel, boolean payment) {
-        super(firstName, lastName, pesel);
+    public Student(String firstName, String lastName, boolean payment) {
+        super(firstName, lastName);
         this.payment = payment;
     }
 

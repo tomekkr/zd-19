@@ -1,8 +1,8 @@
 class Instructor extends Person {
     private String specialization;
 
-    public Instructor(String firstName, String lastName, String pesel, String specialization) {
-        super(firstName, lastName, pesel);
+    public Instructor(String firstName, String lastName, String specialization) {
+        super(firstName, lastName);
         this.specialization = specialization;
     }
 

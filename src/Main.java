@@ -1,16 +1,18 @@
-import java.util.Arrays;
-
 class Main {
     public static void main(String[] args) {
-        Instructor instructor = new Instructor("Marek", "Kowalski", "990023", "Angielski");
-        Student student1 = new Student("Maria", "Pieńkowska", "8656456456", true);
-        Student student2 = new Student("Katarzyna", "Markowska", "5345345", true);
+        Instructor[] instructors = new Instructor[10];
+        Student[] students = new Student[10];
 
-        Group group = new Group();
-        Person[] english = group.createGroup(instructor, 2);
-        group.addStudent(english, student1);
-        System.out.println(Arrays.toString(english));
-        group.addStudent(english, student2);
-        System.out.println(Arrays.toString(english));
+        instructors[0] = new Instructor("Marek", "Kowalski", "Angielski");
+        instructors[1] = new Instructor("a", "b", "Niemiecki");
+        students[0] = new Student("Maria", "Pieńkowska", true);
+        students[1] = new Student("Katarzyna", "Markowska", true);
+
+        Group english = new Group("Angielski", 2);
+        english.addInstructor(instructors[0]);
+        english.addStudent(students[0]);
+        english.addStudent(students[1]);
+
+        english.printInfo();
     }
 }
